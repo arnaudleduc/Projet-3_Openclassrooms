@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+@mixin font-style($color, $weight, $size) {
+    color: $color;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+h2 {
+    @include font-style(black, 700, 25px);
+    margin-left: 20px;
+}
+
+p {
+    @include font-style(black, 200, 18px);
+}
+
+.banner__button {
+    @include font-style(white, 400, 16px);
+}
+
+.operations__button__text {
+    @include font-style(black, 500, 16px);
+}
+
+.restaurant-card h3 {
+    @include font-style(black, 700, 20px)
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ol {
+    list-style-type: none;
+}

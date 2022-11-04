@@ -1,0 +1,20 @@
+.search-form {
+    height: 50px;
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 30px 17px -36px rgba(0,0,0,0.75) inset;
+    position: relative;
+    &__icon {
+        font-size: 17px;
+        position: relative;
+        bottom: 3px;
+        left: 8px;
+    }
+    &__input {
+        background: none;
+        border: none;
+        text-align: center;
+    }
+}
