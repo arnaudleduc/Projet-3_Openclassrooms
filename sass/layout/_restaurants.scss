@@ -1,7 +1,64 @@
 .restaurants {
     background-color: $background-color-primary;
     padding-top: 30px;
-    &__cards {
+    padding-bottom: 70px;
+    &__card {
+        height: 247px;
         width: 90%;
+        background-color: white;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        position: relative;
+        box-shadow: $shadow-primary;
+        &:hover {
+            width: 92%;
+        }
+        &__new {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 80px;
+            font-size: 14px;
+            color: darken($color: $color-tertiary, $amount: 40%);
+            background-color: $color-tertiary;
+            border-radius: 3px;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+        &__image {
+            height: 170px;
+            width: 100%;
+            object-fit: cover;
+            object-position: 0% 61%;
+            display: block;
+            border-radius: 20px 20px 0 0;
+        }
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 30px 0 15px;
+            &__text h3 {
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+            &__text p {
+                margin-top: 5px;
+                margin-bottom: 15px;
+            }
+            & i {
+                font-size: 30px;
+                &:hover {
+                    font-weight: 600;
+                    background: linear-gradient($color-primary, $color-secondary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+            }
+        }
     }
 }
