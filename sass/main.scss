@@ -1,6 +1,7 @@
 @import "./base/general";
 
 @import "./utils/variables";
+@import "./utils/mixins";
 
 @import "./layout/header";
 @import "./layout/form";
@@ -9,4 +10,7 @@
 @import "./layout/restaurants";
 @import "./layout/footer";
 
-@import "./layout/menus"
+@import "./layout/menus";
+
+@import "./animations/loading-spinner";
+@import "./animations/loading-menus";

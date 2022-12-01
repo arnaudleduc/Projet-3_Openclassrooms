@@ -16,6 +16,7 @@ h2 {
 
 p {
     @include font-style(black, 200, 18px);
+    text-overflow: ellipsis;
 }
 
 .banner__button {

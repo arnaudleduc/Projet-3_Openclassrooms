@@ -1,19 +1,34 @@
 .operations {
     margin-top: 50px;
     margin-bottom: 50px;
+    @include tablet-only {
+        max-width: 600px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+    @include desktop-only {
+        max-width: 1024px;
+        margin: 40px auto;
+    }
     &__list--container {
         margin: 0 auto;
         padding: 0;
+        @include desktop-only {
+            display: flex;
+            justify-content: space-around;
+        }
     }
     &__list_elements--container {
         display: flex;
         justify-content: center;
         padding-left: 20px;
+        @include desktop-only {
+            padding-left: 0;
+        }
     }
     &__button {
         margin: 15px 0;
         display: flex;
-        justify-content: center;
         align-items: center;
         height: 80px;
         width: 90%;
@@ -22,6 +37,15 @@
         box-shadow: $shadow-primary;
         border: none;
         border-radius: 20px;
+        &:hover {
+            background-color: #f5edff;
+            box-shadow: $shadow-primary-hover;
+            cursor: pointer;
+        }
+        &:hover > .operations__button__icon {
+            color: $color-primary;
+            opacity: 1;
+        }
             &__number {
                 background-color: $color-primary;
                 width: 25px;
@@ -29,10 +53,17 @@
                 border-radius: 20px;
                 position: absolute;
                 left: -13px;
+                @include desktop-only {
+                    bottom: 58px;
+                    left: 140px;
+                }
                 &-text {
                     @include font-style(white, 400, 16px);
                     position: relative;
                     bottom: 12px;
+                    @include desktop-only {
+                        left: 1px;
+                    }
                 }
             }
             &__icon {
@@ -46,6 +77,19 @@
                 width: 60%;
                 margin: auto auto;
                 text-align: start;
+                @include tablet-only {
+                    text-align: center;
+                }
+                @include desktop-only {
+                    width: 100%;
+                    text-align: center;
+                    margin-left: 15px;
+                }
+            }
+            @include desktop-only {
+                margin: 20px 0;
+                height: 70px;
+                width: 308px;
             }
     }
 }

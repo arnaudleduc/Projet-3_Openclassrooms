@@ -14,5 +14,16 @@
         border-radius: 30px;
         box-shadow: $shadow-primary;
         margin: 10px 0;
+        &:hover {
+            opacity: .9;
+            box-shadow: $shadow-primary-hover;
+            cursor: pointer;
+        }
+        @include tablet-only {
+            width: 300px;
+        }
+        @include desktop-only {
+            width: 350px;
+        }
     }
 }

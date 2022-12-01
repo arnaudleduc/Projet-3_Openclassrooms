@@ -1,7 +1,26 @@
-.restaurants {
+.restaurants__section-wrapper {
     background-color: $background-color-primary;
     padding-top: 30px;
     padding-bottom: 70px;
+}
+
+.restaurants__card-wrapper {
+    @include desktop-only {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+.restaurants {
+    @include tablet-only {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    @include desktop-only {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
     &__card {
         height: 247px;
         width: 90%;
@@ -12,7 +31,11 @@
         position: relative;
         box-shadow: $shadow-primary;
         &:hover {
-            width: 92%;
+            box-shadow: $shadow-primary-hover;
+        }
+        @include desktop-only {
+            width: 40%;
+            display: inline-block;
         }
         &__new {
             display: flex;
@@ -51,9 +74,12 @@
             }
             & i {
                 font-size: 30px;
+                background-image: white;
+                transition: all 400ms ease-in-out;
                 &:hover {
                     font-weight: 600;
-                    background: linear-gradient($color-primary, $color-secondary);
+                    background-position: top;
+                    background-image: linear-gradient($color-primary, $color-secondary);
                     background-clip: text;
                     -webkit-background-clip: text;
                     color: transparent;

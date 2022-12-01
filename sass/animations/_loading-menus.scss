@@ -1,0 +1,25 @@
+$number-of-sections: 3;
+$animation-duration: 800ms;
+$animation-delay: calc($animation-duration / $number-of-sections);
+
+@keyframes show-and-translate-content {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.menus__container {
+    &__section {
+        animation: show-and-translate-content $animation-duration backwards;
+        @for $i from 1 through $number-of-sections {
+            &--#{$i} {
+                animation-delay: $animation-delay * $i;
+            }
+        }
+    }
+}

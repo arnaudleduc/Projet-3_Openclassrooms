@@ -36,7 +36,7 @@
                 }
             }
             &__section {
-                margin-bottom: 30px;
+                padding-bottom: 30px;
                 h2 {
                     text-transform: uppercase;
                     font-size: 17px;
@@ -54,22 +54,35 @@
                 &__card {
                     background-color: white;
                     display: flex;
-                    justify-content: space-between;
                     height: 70px;
                     padding: 0 15px 0 15px;
                     margin: 0 15px;
                     margin-bottom: 10px;
                     box-shadow: $shadow-primary;
                     border-radius: 15px;
+                    position: relative;
+                    overflow: hidden;
                     &__text {
+                        overflow: hidden;
                         h3 {
                             margin-top: 13px;
                             margin-bottom: 6px;
                             font-size: 17px;
+                            
                         }
                         p {
                             margin: 0;
                             font-size: 15px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            word-break: break-all;
+                            white-space: nowrap;
+                        }
+                        &__container {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            display: hidden;
                         }
                     }
                     &__price {
@@ -77,6 +90,35 @@
                         margin-bottom: 12px;
                         font-size: 16px;
                         align-self: flex-end;
+                    }
+                    &__hover {
+                        align-self: center;
+                        color: white;
+                        font-size: 25px;
+                        transform: rotate(90deg);
+                        transition: transform 800ms ease-in-out;
+                        &__container {
+                            width: 0px;
+                            height: 100%;
+                            right: -85px;
+                            background-color: $color-tertiary;
+                            display: flex;
+                            justify-content: center;
+                            border-radius: 0 15px 15px 0;
+                            transform-origin: right;
+                            transition: all 800ms ease-in-out;
+                            position: relative;
+                        }
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    &:hover .menus__container__section__card__hover {
+                        transform: rotate(360deg);
+                    }
+                    &:hover .menus__container__section__card__hover__container {
+                        right: -15px;
+                        width: 70px;
                     }
                 }
 
@@ -87,6 +129,12 @@
                 padding-bottom: 30px;
                 .banner__button {
                     width: 50%;
+                    @media screen and (min-width: 767px) and (max-width: 1024px) {
+                        width: 300px;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        width: 350px;
+                    }
                 }
             }
         }
