@@ -7,14 +7,15 @@
     z-index: 10;
     position: relative;
     &__return {
-        background: none;
-        border: none;
         position: absolute;
-        left: 15px;
-        i {
-            font-size: 20px;
+        left: 20px;
+            &:hover {
+                cursor: pointer;
+            }
+            i {
+                font-size: 20px;
+            }
         }
-    }
     &__img {
         height: 30px;
     }

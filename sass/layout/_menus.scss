@@ -20,23 +20,47 @@
                 justify-content: space-between;
                 align-items: center;
                 margin: 0 30px 0 15px;
+                @include tablet-only {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    padding-bottom: 20px;
+                }
+                @include desktop-only {
+                    max-width: 900px;
+                    margin: 40px auto;
+                }
                 h1 {
                     font-family: Shrikhand;
                     font-size: 28px;
                 }
                 i {
                     font-size: 30px;
+                    background-image: white;
+                    transition: all 800ms ease-in-out;
                     &:hover {
                         font-weight: 600;
-                        background: linear-gradient($color-primary, $color-secondary);
+                        background-position: top;
+                        background-image: linear-gradient($color-primary, $color-secondary);
                         background-clip: text;
                         -webkit-background-clip: text;
                         color: transparent;
+                        cursor: pointer;
                     }
                 }
             }
             &__section {
                 padding-bottom: 30px;
+                @include tablet-only {
+                max-width: 600px;
+                margin: 0 auto;
+                padding-bottom: 20px;
+                }
+                @include desktop-only {
+                    max-width: 900px;
+                    margin: 40px auto;
+                    display: flex;
+                    flex-direction: column;
+                }
                 h2 {
                     text-transform: uppercase;
                     font-size: 17px;
@@ -55,20 +79,32 @@
                     background-color: white;
                     display: flex;
                     height: 70px;
-                    padding: 0 15px 0 15px;
                     margin: 0 15px;
                     margin-bottom: 10px;
                     box-shadow: $shadow-primary;
                     border-radius: 15px;
                     position: relative;
                     overflow: hidden;
+                    @include desktop-only {
+                        width: 46%;
+                    }
+                    &-container {
+                        @include desktop-only {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                        }
+                    }
                     &__text {
                         overflow: hidden;
                         h3 {
                             margin-top: 13px;
                             margin-bottom: 6px;
                             font-size: 17px;
-                            
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            word-break: break-all;
+                            white-space: nowrap;
                         }
                         p {
                             margin: 0;
@@ -82,7 +118,8 @@
                             width: 100%;
                             display: flex;
                             justify-content: space-between;
-                            display: hidden;
+                            padding: 0 15px 0 15px;
+                            transition: all 800ms ease-in-out;
                         }
                     }
                     &__price {
@@ -92,33 +129,33 @@
                         align-self: flex-end;
                     }
                     &__hover {
-                        align-self: center;
-                        color: white;
-                        font-size: 25px;
-                        transform: rotate(90deg);
-                        transition: transform 800ms ease-in-out;
-                        &__container {
-                            width: 0px;
-                            height: 100%;
-                            right: -85px;
-                            background-color: $color-tertiary;
-                            display: flex;
-                            justify-content: center;
-                            border-radius: 0 15px 15px 0;
-                            transform-origin: right;
-                            transition: all 800ms ease-in-out;
-                            position: relative;
+                        width: 70px;
+                        margin-right: -70px;
+                        height: 100%;
+                        background-color: $color-tertiary;
+                        display: flex;
+                        justify-content: center;
+                        border-radius: 0 15px 15px 0;
+                        transition: all 600ms ease-in-out;
+                        &--image {
+                            align-self: center;
+                            color: white;
+                            font-size: 25px;
+                            transform: rotate(90deg);
+                            transition: transform 800ms ease-in-out;
                         }
-                    }
+                    }  
                     &:hover {
                         cursor: pointer;
                     }
-                    &:hover .menus__container__section__card__hover {
-                        transform: rotate(360deg);
+                    &:hover .menus__container__section__card__hover{
+                        margin-right: 0;
                     }
-                    &:hover .menus__container__section__card__hover__container {
-                        right: -15px;
-                        width: 70px;
+                    &:hover .menus__container__section__card__text__container {
+                        width: calc(100% - 70px);
+                    }
+                    &:hover .menus__container__section__card__hover--image {
+                        transform: rotate(360deg);
                     }
                 }
 
@@ -129,10 +166,10 @@
                 padding-bottom: 30px;
                 .banner__button {
                     width: 50%;
-                    @media screen and (min-width: 767px) and (max-width: 1024px) {
+                    @include tablet-only {
                         width: 300px;
                     }
-                    @media screen and (min-width: 1024px) {
+                    @include desktop-only {
                         width: 350px;
                     }
                 }

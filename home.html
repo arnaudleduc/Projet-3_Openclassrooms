@@ -14,58 +14,78 @@
         <title>Ohmyfood! - Commandez vos repas en ligne</title>
     </head>
 
+    <!-- The code below represents the homepage -->
+
     <body>
+
+        <!-- When the page loads, a fake loading spinner appears, the HTML section is below --> 
+
         <div class="loading-spinner__container">
             <div class="loading-spinner">
                 <i class="fa-solid fa-spinner"></i>
             </div>
-            <p class="loading-spinner__text">Your application is loading...</p>
+            <p class="loading-spinner__text">Chargement en cours...</p>
         </div>
         <div class="content__container">
+
+            <!-- Header section, contains website's logo --> 
+
             <header class="header">
                 <img class="header__img" src="./images/logo/ohmyfood.png" alt="Logo d'ohmyfood">
             </header>
+
+            <!-- This section contains website's searchbar --> 
+
             <form class="search-form" method="post" action="#">
                 <i class="fa-sharp fa-solid fa-location-dot search-form__icon"></i>
                 <input class="search-form__input" type="text" name="localisation" id="localisation" value="Paris, Belleville">
             </form>
+
+            <!-- This section contains website's "banner", a brief presentation of the website --> 
+
             <section class="banner">
                 <h2 class="banner__title">Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                 <button class="banner__button">Explorer nos restaurants</button>
             </section>
+
+            <!-- This section contains website's operation, where we tell the user how to use uor website --> 
+
             <section class="operations">
                 <h2>Fonctionnement</h2>
                 <ol class="operations__list--container">
                     <li class="operations__list_elements--container">
                         <button class="operations__button">
-                            <div class="operations__button__number">
-                                <h3 class="operations__button__number-text">1</h3>
-                            </div>
+                            <span class="operations__button__number">
+                                <span class="operations__button__number-text">1</span>
+                            </span>
                             <i class="fa-solid fa-mobile-screen-button operations__button__icon"></i>
-                            <h3 class="operations__button__text">Choisissez un restaurant</h3>
+                            <span class="operations__button__text">Choisissez un restaurant</span>
                         </button>
                     </li>
                     <li class="operations__list_elements--container">
                         <button class="operations__button">
-                            <div class="operations__button__number">
-                                <h3 class="operations__button__number-text">2</h3>
-                            </div>
+                            <span class="operations__button__number">
+                                <span class="operations__button__number-text">2</span>
+                            </span>
                             <i class="fa-solid fa-list-ul operations__button__icon"></i>
-                            <h3 class="operations__button__text">Composez votre menu</h3>
+                            <span class="operations__button__text">Composez votre menu</span>
                         </button>
                     </li>
                     <li class="operations__list_elements--container">
                         <button class="operations__button">
-                            <div class="operations__button__number">
-                                <h3 class="operations__button__number-text">3</h3>
-                            </div>
+                            <span class="operations__button__number">
+                                <span class="operations__button__number-text">3</span>
+                            </span>
                             <i class="fa-solid fa-store operations__button__icon"></i>
-                            <h3 class="operations__button__text">Dégustez au restaurant</h3>
+                            <span class="operations__button__text">Dégustez au restaurant</span>
                         </button>
                     </li>
                 </ol>
             </section>
+
+            <!-- This is the restaurants section, where we list our "partners" -->
+
             <section class="restaurants__section-wrapper">
                 <div class="restaurants">
                     <h2>Restaurants</h2>
@@ -123,6 +143,9 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Footer section with useful links -->
+
             <footer class="footer-wrapper">
                 <div class="footer">
                     <h4>ohmyfood</h4>

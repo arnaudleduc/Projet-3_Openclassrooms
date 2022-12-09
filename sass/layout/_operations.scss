@@ -46,50 +46,49 @@
             color: $color-primary;
             opacity: 1;
         }
-            &__number {
-                background-color: $color-primary;
-                width: 25px;
-                height: 25px;
-                border-radius: 20px;
-                position: absolute;
-                left: -13px;
-                @include desktop-only {
-                    bottom: 58px;
-                    left: 140px;
-                }
-                &-text {
-                    @include font-style(white, 400, 16px);
-                    position: relative;
-                    bottom: 12px;
-                    @include desktop-only {
-                        left: 1px;
-                    }
-                }
+        &__number {
+            background-color: $color-primary;
+            width: 25px;
+            height: 25px;
+            border-radius: 20px;
+            position: absolute;
+            left: -13px;
+            @include desktop-only {
+                bottom: 58px;
+                left: 140px;
             }
-            &__icon {
-                font-size: 20px;
-                color: black;
-                opacity: 0.55;
-                position: absolute;
-                left: 10%;
+            &-text {
+                @include font-style(white, 400, 16px);
+                position: relative;
+                top: 3px;
             }
-            &__text {
-                width: 60%;
-                margin: auto auto;
-                text-align: start;
-                @include tablet-only {
-                    text-align: center;
-                }
-                @include desktop-only {
-                    width: 100%;
-                    text-align: center;
-                    margin-left: 15px;
-                }
+        }
+        &__icon {
+            font-size: 20px;
+            color: black;
+            opacity: 0.55;
+            position: absolute;
+            left: 10%;
+        }
+        &__text {
+            width: 60%;
+            margin: auto auto;
+            text-align: start;
+            font-size: 16px;
+            font-weight: 500;
+            @include tablet-only {
+                text-align: center;
             }
             @include desktop-only {
-                margin: 20px 0;
-                height: 70px;
-                width: 308px;
+                width: 100%;
+                text-align: center;
+                margin-left: 15px;
             }
+        }
+        @include desktop-only {
+            margin: 20px 0;
+            height: 70px;
+            width: 308px;
+        }
     }
 }

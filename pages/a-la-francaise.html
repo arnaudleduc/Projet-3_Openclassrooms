@@ -14,161 +14,185 @@
         <title>Ohmyfood! - Commandez vos repas en ligne</title>
     </head>
 
+    <!-- The code below represents a restaurant's page -->
+
     <body>
+
+        <!-- The header is a little bit different from the homepage's because it has a "return" button -->
+
         <header class="page-header">
-            <button class="page-header__return">
-                <a href="../home.html">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </a>
-            </button>
+            <a class="page-header__return" href="../home.html">
+                <i class="fa-solid fa-arrow-left"></i>  
+            </a>
             <img class="page-header__img" src="../images/logo/ohmyfood.png" alt="Logo d'ohmyfood">
         </header>
         <div class="page-wrapper">
             <section class="menus">
+
+                <!-- The div below contains an image of a meal from the restaurant -->
+
                 <div class="menus__img-container">
                     <img class="menus__img" src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Image d'un plat du restaurant À la française">
                 </div>
                 <div class="menus__container">
+
+                    <!-- The div below contains the name of the restaurant -->
+
                     <div class="menus__container__header">
                         <h1>
                             À la française
                         </h1>
                         <i class="fa-regular fa-heart"></i>
                     </div>
+
+                    <!-- The div below contains three parts : "Entrées", "Plats" and "Desserts" and a button to order -->
+
                     <div class="menus__container__section menus__container__section--1">
-                        <h2>Entrées</h2>
-                        <div class="underline"></div>
-                        <div class="menus__container__section__card">
-                            <div class="menus__container__section__card__text__container">
-                                <div class="menus__container__section__card__text">
-                                    <h3>Tartare de poulpe acidulé</h3>
-                                    <p>Aux zestes d'orange</p>
-                                </div>
-                                <h3 class="menus__container__section__card__price">25€</h3>
-                            </div>
-                            <div class="menus__container__section__card__hover__container">
-                                <div class="menus__container__section__card__hover">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                            </div>
+                        <div class="menus__container__section__title-container">
+                            <h2>Entrées</h2>
+                            <div class="underline"></div>
                         </div>
-                        <div class="menus__container__section__card">
-                            <div class="menus__container__section__card__text__container">
-                                <div class="menus__container__section__card__text">
-                                    <h3>Velouté de légumes d'antan</h3>
-                                    <p>Carotte, panais, topinambour</p>
+                        <div class="menus__container__section__card-container">
+                            <div class="menus__container__section__card">
+                                <div class="menus__container__section__card__text__container">
+                                    <div class="menus__container__section__card__text">
+                                        <h3>Tartare de poulpe acidulé</h3>
+                                        <p>Aux zestes d'orange</p>
+                                    </div>
+                                    <h3 class="menus__container__section__card__price">25€</h3>
                                 </div>
-                                <h3 class="menus__container__section__card__price">35€</h3>
-                            </div>
-                            <div class="menus__container__section__card__hover__container">
                                 <div class="menus__container__section__card__hover">
-                                    <i class="fa-solid fa-circle-check"></i>
+                                    <div class="menus__container__section__card__hover--image">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="menus__container__section__card">
-                            <div class="menus__container__section__card__text__container">
-                                <div class="menus__container__section__card__text">
-                                    <h3>Soupe à l'oignon</h3>
-                                    <p>Revisitée</p>
+                            <div class="menus__container__section__card">
+                                <div class="menus__container__section__card__text__container">
+                                    <div class="menus__container__section__card__text">
+                                        <h3>Velouté de légumes d'antan</h3>
+                                        <p>Carotte, panais, topinambour</p>
+                                    </div>
+                                    <h3 class="menus__container__section__card__price">35€</h3>
                                 </div>
-                                <h3 class="menus__container__section__card__price">20€</h3>
-                            </div>
-                            <div class="menus__container__section__card__hover__container">
                                 <div class="menus__container__section__card__hover">
-                                    <i class="fa-solid fa-circle-check"></i>
+                                    <div class="menus__container__section__card__hover--image">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menus__container__section__card">
+                                <div class="menus__container__section__card__text__container">
+                                    <div class="menus__container__section__card__text">
+                                        <h3>Soupe à l'oignon</h3>
+                                        <p>Revisitée</p>
+                                    </div>
+                                    <h3 class="menus__container__section__card__price">20€</h3>
+                                </div>
+                                <div class="menus__container__section__card__hover">
+                                    <div class="menus__container__section__card__hover--image">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="menus__container__section menus__container__section--2">
-                        <h2>Plats</h2>
-                        <div class="underline"></div>
-                        <div class="menus__container__section__card">
-                            <div class="menus__container__section__card__text__container">
-                                <div class="menus__container__section__card__text">
-                                    <h3>Coquilles Saint-Jacques</h3>
-                                    <p>Accompagnées d'une purée de panais</p>
-                                </div>
-                                <h3 class="menus__container__section__card__price">40€</h3>
-                            </div>
-                            <div class="menus__container__section__card__hover__container">
-                                <div class="menus__container__section__card__hover">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                            </div>
+                        <div class="menus__container__section__title-container">
+                            <h2>Plats</h2>
+                            <div class="underline"></div>
                         </div>
-                        <div class="menus__container__section__card">
-                            <div class="menus__container__section__card__text__container">
-                                <div class="menus__container__section__card__text">
-                                    <h3>Magret de canard</h3>
-                                    <p>Et parmentier de pommes de terre</p>
+                        <div class="menus__container__section__card-container">
+                            <div class="menus__container__section__card">
+                                <div class="menus__container__section__card__text__container">
+                                    <div class="menus__container__section__card__text">
+                                        <h3>Coquilles Saint-Jacques</h3>
+                                        <p>Accompagnées d'une purée de panais</p>
+                                    </div>
+                                    <h3 class="menus__container__section__card__price">40€</h3>
                                 </div>
-                                <h3 class="menus__container__section__card__price">35€</h3>
-                            </div>
-                            <div class="menus__container__section__card__hover__container">
                                 <div class="menus__container__section__card__hover">
-                                    <i class="fa-solid fa-circle-check"></i>
+                                    <div class="menus__container__section__card__hover--image">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="menus__container__section__card">
-                            <div class="menus__container__section__card__text__container"> 
-                                <div class="menus__container__section__card__text">
-                                    <h3>Pigeonneau d’Ille-et-Vilaine</h3>
-                                    <p>Sur son lit de gnocchis aux légumes</p>
+                            <div class="menus__container__section__card">
+                                <div class="menus__container__section__card__text__container">
+                                    <div class="menus__container__section__card__text">
+                                        <h3>Magret de canard</h3>
+                                        <p>Et parmentier de pommes de terre</p>
+                                    </div>
+                                    <h3 class="menus__container__section__card__price">35€</h3>
                                 </div>
-                                <h3 class="menus__container__section__card__price">44€</h3>
-                            </div>
-                            <div class="menus__container__section__card__hover__container">
                                 <div class="menus__container__section__card__hover">
-                                    <i class="fa-solid fa-circle-check"></i>
+                                    <div class="menus__container__section__card__hover--image">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menus__container__section__card">
+                                <div class="menus__container__section__card__text__container">
+                                    <div class="menus__container__section__card__text">
+                                        <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                                        <p>Sur son lit de gnocchis aux légumes</p>
+                                    </div>
+                                    <h3 class="menus__container__section__card__price">44€</h3>
+                                </div>
+                                <div class="menus__container__section__card__hover">
+                                    <div class="menus__container__section__card__hover--image">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="menus__container__section menus__container__section--3">
-                        <h2>Desserts</h2>
-                        <div class="underline"></div>
-                        <div class="menus__container__section__card">
-                            <div class="menus__container__section__card__text__container">
-                                <div class="menus__container__section__card__text">
-                                    <h3>Pétales de violettes glacés</h3>
-                                    <p>Et purée de noisettes</p>
-                                </div>
-                                <h3 class="menus__container__section__card__price">18€</h3>
-                            </div>
-                            <div class="menus__container__section__card__hover__container">
-                                <div class="menus__container__section__card__hover">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                </div>
-                            </div>
+                        <div class="menus__container__section__title-container">
+                            <h2>Desserts</h2>
+                            <div class="underline"></div>
                         </div>
-                        <div class="menus__container__section__card">
-                            <div class="menus__container__section__card__text__container">
-                                <div class="menus__container__section__card__text">
-                                    <h3>Fondant au chocolat</h3>
-                                    <p>Revisité</p>
+                        <div class="menus__container__section__card-container">
+                            <div class="menus__container__section__card">
+                                <div class="menus__container__section__card__text__container">
+                                    <div class="menus__container__section__card__text">
+                                        <h3>Pétales de violettes glacés</h3>
+                                        <p>Et purée de noisettes</p>
+                                    </div>
+                                    <h3 class="menus__container__section__card__price">18€</h3>
                                 </div>
-                                <h3 class="menus__container__section__card__price">22€</h3>
-                            </div>
-                            <div class="menus__container__section__card__hover__container">
                                 <div class="menus__container__section__card__hover">
-                                    <i class="fa-solid fa-circle-check"></i>
+                                    <div class="menus__container__section__card__hover--image">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="menus__container__section__card">
-                            <div class="menus__container__section__card__text__container">
-                                <div class="menus__container__section__card__text">
-                                    <h3>Millefeuille croustillant</h3>
-                                    <p>Myrtilles et pâte d’amande</p>
+                            <div class="menus__container__section__card">
+                                <div class="menus__container__section__card__text__container">
+                                    <div class="menus__container__section__card__text">
+                                        <h3>Fondant au chocolat</h3>
+                                        <p>Revisité</p>
+                                    </div>
+                                    <h3 class="menus__container__section__card__price">22€</h3>
                                 </div>
-                                <h3 class="menus__container__section__card__price">23€</h3>
-                            </div>
-                            <div class="menus__container__section__card__hover__container">
                                 <div class="menus__container__section__card__hover">
-                                    <i class="fa-solid fa-circle-check"></i>
+                                    <div class="menus__container__section__card__hover--image">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menus__container__section__card">
+                                <div class="menus__container__section__card__text__container">
+                                    <div class="menus__container__section__card__text">
+                                        <h3>Millefeuille croustillant</h3>
+                                        <p>Myrtilles et pâte d’amande</p>
+                                    </div>
+                                    <h3 class="menus__container__section__card__price">23€</h3>
+                                </div>
+                                <div class="menus__container__section__card__hover">
+                                    <div class="menus__container__section__card__hover--image">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -178,6 +202,9 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Footer section with useful links -->
+
             <footer class="footer-wrapper">
                 <div class="page__footer">
                     <h4>ohmyfood</h4>
