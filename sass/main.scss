@@ -1,3 +1,6 @@
+/* This file groups up all scss files into one and
+allows Sass to compile all of them into one CSS file */
+
 @import "./base/general";
 
 @import "./utils/variables";

@@ -1,3 +1,12 @@
+/* This file contains useful mixins, one to declare a general font,
+the others for responsive usage */
+
+@mixin font-style($color, $weight, $size) {
+    color: $color;
+    font-weight: $weight;
+    font-size: $size;
+}
+
 @mixin tablet-only {
     @media screen and (min-width: 768px) and (max-width: 1023px) {
         @content;
